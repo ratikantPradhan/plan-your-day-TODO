@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Todo List</h1>
+        <form id="todo-form">
+            <!-- document.getElementById -->
+            <input type="text" id="todo-input" placeholder="Enter a new task" required>
+            <select aria-label="category-list" id="category-select">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="shopping">Shopping</option>
+            </select>
+            <select aria-label="priority-list" id="priority-select">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label>
+                <input type="checkbox" id="completed-input">
+                Completed
+            </label>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="filters">
+            <select aria-label="category-filter" id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="shopping">Shopping</option>
+            </select>
+            <select aria-label="priority-filter" id="priority-filter">
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Search tasks">
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
